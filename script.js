@@ -44,3 +44,19 @@ function isEqual(str1, str2){
 console.log(isEqual("HelLo world", "HELLO WORLD"));
 
 // *6. Написати функцію, яка викидає помилку під час роботи і перевірити роботу функції, викликавши її у блоці try-catch
+
+function isValidName (name){
+    if (typeof name !== 'string'){
+        throw new TypeError ("Value is`t string!");
+    } else{
+        return `Hello ${name}`;
+    }
+}
+
+try{
+    console.log(isValidName(123));
+} catch(error){
+    console.log(error);
+}
+
+console.log("Перевірка роботи коду після обробки помилки");
